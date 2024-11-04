@@ -1,0 +1,256 @@
+POST http://localhost:3001/api/auth/signup HTTP/1.1
+content-type: application/json
+
+{
+    "username": "samTest",
+    "email": "samen@gmail.com",
+    "password": "user123"
+}
+
+
+###
+POST http://localhost:3001/api/auth/signin HTTP/1.1
+content-type: application/json
+
+{
+    "email": "user1@gmail.com",
+    "password": "user123"
+} 
+
+
+###
+POST http://localhost:3001/api/auth/signin-sso HTTP/1.1
+content-type: application/json
+
+{
+    "username": "user@gmail.com",
+    "password": "user123"
+} 
+
+###
+POST http://localhost:3001/api/auth/signup-sso HTTP/1.1
+content-type: application/json
+
+{
+    "username": "user 4",
+    "email": "user4@gmail.com",
+    "password": "user123"
+} 
+
+
+###
+POST http://localhost:3001/api/auth/verify-token HTTP/1.1
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjExYzhiMmRmNGM1NTlkMjhjOWRlNWQ0MTAxNDFiMzBkOWUyYmNlM2IiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoidXNlcjEiLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vb3BzYzczMTItYmQ4YTQiLCJhdWQiOiJvcHNjNzMxMi1iZDhhNCIsImF1dGhfdGltZSI6MTcyNTE0NTI1MSwidXNlcl9pZCI6InBtcDZqV3VHWWZQR1M0RmRsZ1F0V3pLSEh1ZzEiLCJzdWIiOiJwbXA2ald1R1lmUEdTNEZkbGdRdFd6S0hIdWcxIiwiaWF0IjoxNzI1MTQ1MjUxLCJleHAiOjE3MjUxNDg4NTEsImVtYWlsIjoidXNlcjFAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbInVzZXIxQGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.Mct4q85Be9KvQLAKXvlORgDe_xfDjoe0JHY16-GGn0OqtkqNI-iMR6a7CP-OTbiyulngF3jG9qo5J16eAE_PpmKoR4bedqz2_PMWFPdfmcvDW_Evj7MjEGqigygdGrqYaUsIjCCWAmzGutT3vyFfxBlpxtwVh3g3q2IjDtWlNhSokKvUQe6DfXCZbMl5-eEqFrcn1tdKqqy0xrz_ui84OdE0lW0HEphuoykEDGIqT7pfwLfgXrImlX-q4avtLZYC5GUrayK4CeyFyi_cZqtgxnWuwEpu9XeiSVfFhNecTFooSbvhb_syCAnhW8qWWv66Ooq6uNw3h1Rm8A_Fk4uYlw
+
+
+###
+PUT http://localhost:3001/api/user/0AqZwpqX2seecn6855llTwlnr9J2/update-email-and-username HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiIwQXFad3BxWDJzZWVjbjY4NTVsbFR3bG5yOUoyIiwiZW1haWwiOiJ1c2VyQGdtYWlsLmNvbSIsImlhdCI6MTcyNjkyMTYwMiwiZXhwIjoxNzI3MTgwODAyfQ.q1xDL1NDBWPesr2YMroUoT_9y2pS-nJO5PBfeszLHkY
+content-type: application/json
+
+{
+    "username": "user 1",
+    "email": "user@gmail.com"
+}
+
+ 
+
+###
+PUT http://localhost:3001/api/user/0AqZwpqX2seecn6855llTwlnr9J2/update-password HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiIwQXFad3BxWDJzZWVjbjY4NTVsbFR3bG5yOUoyIiwiZW1haWwiOiJ1c2VyQGdtYWlsLmNvbSIsImlhdCI6MTcyNjkyMTYwMiwiZXhwIjoxNzI3MTgwODAyfQ.q1xDL1NDBWPesr2YMroUoT_9y2pS-nJO5PBfeszLHkY
+content-type: application/json
+
+{
+    "password": "user123"
+}
+
+
+
+###
+GET http://localhost:3001/api/category/C4Xq7PBLLQR0ZfoqMYX7o9T2Gp32 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImNjNWU0MTg0M2M1ZDUyZTY4ZWY1M2UyYmVjOTgxNDNkYTE0NDkwNWUiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoidXNlciAzIiwiaXNzIjoiaHR0cHM6Ly9zZWN1cmV0b2tlbi5nb29nbGUuY29tL29wc2M3MzEyLWJkOGE0IiwiYXVkIjoib3BzYzczMTItYmQ4YTQiLCJhdXRoX3RpbWUiOjE3MjU0MDE0NzAsInVzZXJfaWQiOiJDNFhxN1BCTExRUjBaZm9xTVlYN285VDJHcDMyIiwic3ViIjoiQzRYcTdQQkxMUVIwWmZvcU1ZWDdvOVQyR3AzMiIsImlhdCI6MTcyNTQwMTQ3MCwiZXhwIjoxNzI1NDA1MDcwLCJlbWFpbCI6InVzZXIzQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJ1c2VyM0BnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.WwKzjDaKobbz2k8KiSvPgrzA2iRx_iGM9mY8ogPiAvvlStnAxStGC5jJ-AkKBUBB4C6U63ombu4bFUuRqtQ-NRaciBIaPqJ-lCl4MBCkI64xbVafdyL4ZlHQVoSRp8v5LxVziWnPlkM0TfYlwQv-X0-sFKozK1nbvTNZrBtkX1-FoZIDgMYAjOVlXDbge_N3etr-U24JeDy3uPPtromwbmhKwS1xWc8XjrPo3XUfBHFi7O5udVyXtO14XjVXTIZlnTeagGM3OGO4pEI1G2NDrAzL320dULoyxb8gC4MZfjQra0Cvd841AVNp8G1ozuswIb3MTKUn5uYzIFd1EUP08w
+
+###
+POST http://localhost:3001/api/category/create HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiIwQXFad3BxWDJzZWVjbjY4NTVsbFR3bG5yOUoyIiwiZW1haWwiOiJ1c2VyQGdtYWlsLmNvbSIsImlhdCI6MTcyNjIzMzQ3NywiZXhwIjoxNzI2NDkyNjc3fQ.RFRGR_OZucslOEmkE_y-n3UDtdaTo_ZdH0u3ZTgvYss
+content-type: application/json
+
+{
+    "userid": "0AqZwpqX2seecn6855llTwlnr9J2",
+    "name": "category",
+    "color": "Blue",
+    "icon": "transportation",
+    "transactiontype": "INCOME"
+}
+
+###
+PUT http://localhost:3001/api/category/rNFzPhtCdpG8hdpihzx7 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiIwQXFad3BxWDJzZWVjbjY4NTVsbFR3bG5yOUoyIiwiZW1haWwiOiJ1c2VyQGdtYWlsLmNvbSIsImlhdCI6MTcyNjIzMzQ3NywiZXhwIjoxNzI2NDkyNjc3fQ.RFRGR_OZucslOEmkE_y-n3UDtdaTo_ZdH0u3ZTgvYss
+content-type: application/json
+
+{
+    "color": "Red",
+    "icon": "education",
+    "transactiontype": "EXPENSE"
+}
+
+###
+DELETE  http://localhost:3001/api/category/FZRXoxWfekppMBs9tXff HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiIwQXFad3BxWDJzZWVjbjY4NTVsbFR3bG5yOUoyIiwiZW1haWwiOiJ1c2VyQGdtYWlsLmNvbSIsImlhdCI6MTcyNzU1NTIyNCwiZXhwIjoxNzI3ODE0NDI0fQ.H9id0Q-Ag29iha7cKEUyYh1ZjVjW58uF6fC6Cen4NtE
+
+###
+GET http://localhost:3001/api/transaction/0AqZwpqX2seecn6855llTwlnr9J2 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiIwQXFad3BxWDJzZWVjbjY4NTVsbFR3bG5yOUoyIiwiZW1haWwiOiJ1c2VyQGdtYWlsLmNvbSIsImlhdCI6MTcyNjI0NzgyMSwiZXhwIjoxNzI2NTA3MDIxfQ.IOXioPa-MG4gGgj53HL1B3ZOiqi0mFm_JXSHngeg3vo
+
+###
+POST http://localhost:3001/api/transaction/create HTTP/1.1
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImNjNWU0MTg0M2M1ZDUyZTY4ZWY1M2UyYmVjOTgxNDNkYTE0NDkwNWUiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoidXNlciAzIiwiaXNzIjoiaHR0cHM6Ly9zZWN1cmV0b2tlbi5nb29nbGUuY29tL29wc2M3MzEyLWJkOGE0IiwiYXVkIjoib3BzYzczMTItYmQ4YTQiLCJhdXRoX3RpbWUiOjE3MjU0ODExNzAsInVzZXJfaWQiOiJDNFhxN1BCTExRUjBaZm9xTVlYN285VDJHcDMyIiwic3ViIjoiQzRYcTdQQkxMUVIwWmZvcU1ZWDdvOVQyR3AzMiIsImlhdCI6MTcyNTQ4MTE3MCwiZXhwIjoxNzI1NDg0NzcwLCJlbWFpbCI6InVzZXIzQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJ1c2VyM0BnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.owhFvnO3Cq2JuTakcqsFP_gr7qb6fGXENN2djkL4WBOksCnQMX01fwH_i6nuYn_ekkoE047fZJ6Wb48RtRp0rH1f0mW_PFQj7Uz8JpOGxbo6niSa76PJHFNpbEgR8uajPUBI8nxGqFGOSAPi_Y6De1d2DFdXjWJj9k6kXHD7PIxN2lbaKciFollQ9A9mVC07X2UPlr5w3ZXJWV5Cr-_YP_7CiFiFb9EVe_dcnLOCcwfCHvTLSQHzeFaEtIM1JMm0I5znfEhzUZe8u26U7pSyub3mwFVKfQDDOtwsUSlKnzOgyzmTPHKNzL5AmARDHaU1pcZQkBJNSMD3-i756OyoLg
+content-type: application/json
+
+{
+    "userid": "C4Xq7PBLLQR0ZfoqMYX7o9T2Gp32",
+    "name": "transaction 4",
+    "amount": 2500.00,
+    "type": "Expense",
+    "categoryId": "eUWxEdA68QOR4fRbbFIC",
+    "isrecurring": true
+}
+
+###
+PUT http://localhost:3001/api/transaction/OFqTpwdGEycllBVabgIV HTTP/1.1
+content-type: application/json
+
+{    
+    "isRecurring": false
+}
+
+###
+GET http://localhost:3001/api/goal/id1 HTTP/1.1
+
+###
+POST http://localhost:3001/api/goal/create HTTP/1.1
+content-type: application/json
+
+{
+    "userid": "id1",
+    "name": "name 1",
+    "target_amount": 2100.00,
+    "current_amount": 0.00,
+    "Deadline": "12/12/2024",
+    "contribution_type": "monthly",
+    "contribution_amount": 21.57
+}
+ 
+###
+GET http://localhost:3001/api/analytics/0AqZwpqX2seecn6855llTwlnr9J2 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiIwQXFad3BxWDJzZWVjbjY4NTVsbFR3bG5yOUoyIiwiZW1haWwiOiJ1c2VyQGdtYWlsLmNvbSIsImlhdCI6MTcyNjI0NzgyMSwiZXhwIjoxNzI2NTA3MDIxfQ.IOXioPa-MG4gGgj53HL1B3ZOiqi0mFm_JXSHngeg3vo
+
+
+###
+GET http://localhost:3001/api/analytics/0AqZwpqX2seecn6855llTwlnr9J2/transactions/monthly HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiIwQXFad3BxWDJzZWVjbjY4NTVsbFR3bG5yOUoyIiwiZW1haWwiOiJ1c2VyQGdtYWlsLmNvbSIsImlhdCI6MTcyNjI0NzgyMSwiZXhwIjoxNzI2NTA3MDIxfQ.IOXioPa-MG4gGgj53HL1B3ZOiqi0mFm_JXSHngeg3vo
+
+###
+GET http://localhost:3001/api/analytics/0AqZwpqX2seecn6855llTwlnr9J2/transactions/weekly HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiIwQXFad3BxWDJzZWVjbjY4NTVsbFR3bG5yOUoyIiwiZW1haWwiOiJ1c2VyQGdtYWlsLmNvbSIsImlhdCI6MTcyNjI0NzgyMSwiZXhwIjoxNzI2NTA3MDIxfQ.IOXioPa-MG4gGgj53HL1B3ZOiqi0mFm_JXSHngeg3vo
+
+###
+GET http://localhost:3001/api/analytics/0AqZwpqX2seecn6855llTwlnr9J2/categories HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiIwQXFad3BxWDJzZWVjbjY4NTVsbFR3bG5yOUoyIiwiZW1haWwiOiJ1c2VyQGdtYWlsLmNvbSIsImlhdCI6MTcyNjI0NzgyMSwiZXhwIjoxNzI2NTA3MDIxfQ.IOXioPa-MG4gGgj53HL1B3ZOiqi0mFm_JXSHngeg3vo
+
+###
+GET http://localhost:3001/api/investment HTTP/1.1
+
+###
+GET http://localhost:3001/api/investment/update/logo HTTP/1.1
+
+###
+GET http://localhost:3001/api/stocks/AAPL HTTP/1.1
+
+###
+GET http://localhost:3001/api/stocks/top/stocks HTTP/1.1
+
+###
+GET http://localhost:3001/api/stocks/top/batch-stocks HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiJwbXA2ald1R1lmUEdTNEZkbGdRdFd6S0hIdWcxIiwiZW1haWwiOiJ1c2VyMUBnbWFpbC5jb20iLCJpYXQiOjE3MzAzMDIyNDgsImV4cCI6MTczMDU2MTQ0OH0.tPv2wEz1K4us5FQROnB-9Yh2tLX6gpNgYZvdij7oL5A
+
+###
+GET http://localhost:3001/api/stocks/history?symbol=IIXFF HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiJwbXA2ald1R1lmUEdTNEZkbGdRdFd6S0hIdWcxIiwiZW1haWwiOiJ1c2VyMUBnbWFpbC5jb20iLCJpYXQiOjE3MzAzMDIyNDgsImV4cCI6MTczMDU2MTQ0OH0.tPv2wEz1K4us5FQROnB-9Yh2tLX6gpNgYZvdij7oL5A
+
+###
+GET http://localhost:3001/api/stocks/top/40 HTTP/1.1
+
+###
+POST http://localhost:3001/api/translation/en/af/translate HTTP/1.1
+content-type: application/json
+
+{
+    "text": "hello, my name is nathi"
+}
+
+
+###
+GET http://localhost:3001/api/notification/pmp6jWuGYfPGS4FdlgQtWzKHHug1 HTTP/1.1
+
+
+###
+PUT http://localhost:3001/api/notification/pmp6jWuGYfPGS4FdlgQtWzKHHug1/register-token HTTP/1.1
+content-type: application/json
+
+{
+    "fcmToken": "mockToken123"
+}
+
+
+###
+POST http://localhost:3001/api/notification/create HTTP/1.1
+content-type: application/json
+
+{
+    "userid": "pmp6jWuGYfPGS4FdlgQtWzKHHug1",
+    "title": "new goal",
+    "message": "goal 'new car' created successfully"
+}
+
+###
+PUT http://localhost:3001/api/notification/4U7RDCEwizoCGEgPyNn2 HTTP/1.1
+
+
+###
+GET http://localhost:3001/api/investment/0AqZwpqX2seecn6855llTwlnr9J2 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiJwbXA2ald1R1lmUEdTNEZkbGdRdFd6S0hIdWcxIiwiZW1haWwiOiJ1c2VyMUBnbWFpbC5jb20iLCJpYXQiOjE3MzAzMDIyNDgsImV4cCI6MTczMDU2MTQ0OH0.tPv2wEz1K4us5FQROnB-9Yh2tLX6gpNgYZvdij7oL5A
+
+###
+POST http://localhost:3001/api/investment/buy HTTP/1.1
+content-type: application/json
+
+{
+    "userid": "pmp6jWuGYfPGS4FdlgQtWzKHHug1",
+    "symbol": "GOOGL",
+    "quantity": 1
+}
+
+###
+POST http://localhost:3001/api/investment/sell HTTP/1.1
+content-type: application/json
+
+{
+    "userid": "pmp6jWuGYfPGS4FdlgQtWzKHHug1",
+    "symbol": "META",
+    "quantity": 1
+}
+
+###
+GET  http://localhost:3001/api/investment/user/stock HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiJwbXA2ald1R1lmUEdTNEZkbGdRdFd6S0hIdWcxIiwiZW1haWwiOiJ1c2VyMUBnbWFpbC5jb20iLCJpYXQiOjE3MzAzMDIyNDgsImV4cCI6MTczMDU2MTQ0OH0.tPv2wEz1K4us5FQROnB-9Yh2tLX6gpNgYZvdij7oL5A
+content-type: application/json
+
+{
+    "userid": "0AqZwpqX2seecn6855llTwlnr9J2",
+    "symbol": "TSLA"
+}
+
+###
+GET http://localhost:3001/api/investment/0AqZwpqX2seecn6855llTwlnr9J2/value HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiJwbXA2ald1R1lmUEdTNEZkbGdRdFd6S0hIdWcxIiwiZW1haWwiOiJ1c2VyMUBnbWFpbC5jb20iLCJpYXQiOjE3MzAzMDIyNDgsImV4cCI6MTczMDU2MTQ0OH0.tPv2wEz1K4us5FQROnB-9Yh2tLX6gpNgYZvdij7oL5A
